@@ -11,7 +11,7 @@ function verificador(){
         switch (generosChecked) {
             case "masculino":
                 resposta.innerHTML=(`<p> Um menino de ${idade} anos</p>`)
-                resposta.innerHTML+=(`<img src="https://images.pexels.com/photos/415223/pexels-photo-415223.jpeg?cs=srgb&dl=pexels-pixabay-415223.jpg&fm=jpg" alt="criançaMasculina">`)
+                resposta.innerHTML+=(`<img src="https://images.pexels.com/photos/7970114/pexels-photo-7970114.jpeg?cs=srgb&dl=pexels-antoni-shkraba-7970114.jpg&fm=jpg" alt="criançaMasculina">`)
             break;
 
             case "femenino": 
