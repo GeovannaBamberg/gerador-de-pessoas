@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipo de pessoas</title>
+    <style>
+        body{
+            background-color: cadetblue;
+            color: aliceblue;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            text-align: center;
+            font-size: 24px;
+            
+        }
+        div{
+            background-color: aliceblue;
+            color: black;
+        }
+        li{
+            list-style-type: none;
+        }
+        img{
+            width: 400px;
+            height: 300px;
+            border-radius: 100%;
+           
+        } 
+    </style>
+</head>
+<body>
+    <main class="title">
+        <h1>GERADOR DE PESSOAS</h1>
+        <div id="conteudo">
+            <label>Ano de Nascimento:</label>
+            <input type="number" name="anoNascimento" id="anoNascimento">
+            <br>
+            <label>Genero:</label>
+               
+                <input type="radio" name="generos" id="masculino" value="masculino"> Masculino
+                <input type="radio" name="generos" id="femenino" value="femenino"> Femenino
+        
+            <br>
+            <button onclick="verificador()">Verificar</button>
+            
+            <div id="resposta">
+
+                <p>Insira os dados a cima para gerar uma pessoa</p>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&COPY; Geovanna Bamberg</p>
+    </footer>
+    
+</body>
+<script>
+
+
+    function verificador(){
+        var anoNascimento = document.getElementById("anoNascimento").value 
+        var generosChecked = document.querySelector('input[name="generos"]:checked').value;
+        var resposta = document.getElementById("resposta")
+        anoNascimento= Number(anoNascimento)
+        var ano= new Date()
+        var anoAtual = ano.getFullYear()
+        var idade = anoAtual-anoNascimento
+
+        if (idade>=0 && idade<=12) {
+            switch (generosChecked) {
+                case "masculino":
+                    resposta.innerHTML=(`<p> Um menino de ${idade} anos</p>`)
+                    resposta.innerHTML+=(`<img src="http://www.clinicacoutinho.com.br/wp-content/uploads/2021/04/dor_de_dente-980x653.jpeg" alt="criançaMasculina">`)
+                break;
+
+                case "femenino": 
+                    resposta.innerHTML=(`<p> Uma menina de ${idade} anos </p>`)
+                    resposta.innerHTML+=(`<img src="https://leiturinha.com.br/blog/wp-content/uploads/2018/04/intelig%C3%AAncia-emocional.jpg">`)
+                break;
+            }
+        }else{
+            if (idade>12 && idade<=18) {
+            switch (generosChecked) {
+                case "masculino":
+                    resposta.innerHTML=(`<p> Um garoto adolecente de ${idade} anos</p>`)
+                    resposta.innerHTML+=(`<img src="https://eyc7xs8f99a.exactdn.com/blog/wp-content/uploads/adolescente-em-primeiro-plano.jpg" alt="adolecenteMasculino">`)
+                break;
+
+                case "femenino": 
+                    resposta.innerHTML=(`<p> Uma garota adolecente de ${idade} anos </p>`)
+                    resposta.innerHTML+=(`<img src="https://www.unicef.org/brazil/sites/unicef.org.brazil/files/styles/hero_mobile/public/br_leticia_pinheiro01.jpg?itok=Dm3AT8hX" alt="adolecenteFemenina">`)
+                break;
+            }
+        } else { 
+            if (idade>18 && idade<=60) {
+                switch (generosChecked) {
+                case "masculino":
+                    resposta.innerHTML=(`<p> Um homem adulto de ${idade} anos </p>`)
+                    resposta.innerHTML+=(`<img src="https://img.freepik.com/fotos-gratis/homem-jovem-e-bonito-adulto-se-sentindo-serio-forte-e-rebelde-levantando-o-punho-protestando-ou-lutando-pela-revolucao_1194-305371.jpg" alt="HomemAdulto">`)
+                break;
+
+                case "femenino": 
+                    resposta.innerHTML=(`<p> Uma mulher adulta de ${idade} anos </p>`)
+                    resposta.innerHTML+=(`<img src="https://img.freepik.com/fotos-gratis/mulher-de-negocios-jovem-adulto-treinador-no-escritorio-fecha-as-orelhas-com-as-maos-os-bracos-as-palmas-das-maos_183314-4092.jpg?w=740" alt="mulherAdulta">`)
+                break;
+            }
+            } else {
+                if (idade>=60 && idade<=150) {
+                    switch (generosChecked) {
+                    case "masculino":
+                    resposta.innerHTML=(`<p> Um Homem idoso de ${idade} anos </p>`)
+                    resposta.innerHTML+=(`<img src="https://media.istockphoto.com/photos/senior-man-smiling-at-home-picture-id1029340518?k=20&m=1029340518&s=612x612&w=0&h=ztScOmlnZTb308vwJlugITqKx_xJsdASF9Fge2KsQt8=" alt="homemIdoso">`)
+                    break;
+
+                    case "femenino": 
+                    resposta.innerHTML=(`<p> Uma mulher idosa de ${idade} anos</p>`)
+                    resposta.innerHTML+=(`<img src="https://img.freepik.com/fotos-gratis/mulher-africana-idosa-sorridente-retrato-de-rosto_53876-143107.jpg?w=2000" alt="mulherIdosa">`)
+                    break;
+                } 
+             } else{
+                 if (idade<0 || idade>150) {
+                     alert("[ERRO] Os dados são impossiveis, revise-os.")
+                     
+                 }
+             }
+                
+            }
+            
+        }
+    }    
+}               
+</script>
+</html>
