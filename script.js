@@ -11,7 +11,7 @@ function verificador(){
         switch (generosChecked) {
             case "masculino":
                 resposta.innerHTML=(`<p> Um menino de ${idade} anos</p>`)
-                resposta.innerHTML+=(`<img src="https://images.pexels.com/photos/7970114/pexels-photo-7970114.jpeg?cs=srgb&dl=pexels-antoni-shkraba-7970114.jpg&fm=jpg" alt="criançaMasculina">`)
+                resposta.innerHTML+=(`<img src="https://get.pxhere.com/photo/person-people-girl-boy-male-portrait-spring-child-facial-expression-smile-red-hair-face-infant-toddler-eye-beauty-freckles-portrait-photography-815317.jpg" alt="criançaMasculina">`)
             break;
 
             case "femenino": 
@@ -29,7 +29,7 @@ function verificador(){
 
             case "femenino": 
                 resposta.innerHTML=(`<p> Uma garota adolecente de ${idade} anos </p>`)
-                resposta.innerHTML+=(`<img src="https://images.pexels.com/photos/1996008/pexels-photo-1996008.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="adolecenteFemenina">`)
+                resposta.innerHTML+=(`<img src="https://get.pxhere.com/photo/beautiful-blur-carefree-close-up-cute-depth-of-field-enjoyment-eyes-face-facial-expression-fashion-female-focus-fun-girl-hair-happiness-happy-joy-lady-model-necklace-person-photoshoot-portrait-pretty-smile-smiling-teen-woman-young-photograph-beauty-skin-photography-snapshot-black-hair-long-hair-photo-shoot-portrait-photography-brown-hair-lip-laughter-1419067.jpg" alt="adolecenteFemenina">`)
             break;
         }
     } else { 
