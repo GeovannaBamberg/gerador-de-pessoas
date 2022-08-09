@@ -29,7 +29,7 @@ function verificador(){
 
             case "femenino": 
                 resposta.innerHTML=(`<p> Uma garota adolecente de ${idade} anos </p>`)
-                resposta.innerHTML+=(`<img src="https://www.unicef.org/brazil/sites/unicef.org.brazil/files/styles/hero_mobile/public/br_leticia_pinheiro01.jpg?itok=Dm3AT8hX" alt="adolecenteFemenina">`)
+                resposta.innerHTML+=(`<img src="https://images.pexels.com/photos/1996008/pexels-photo-1996008.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="adolecenteFemenina">`)
             break;
         }
     } else { 
